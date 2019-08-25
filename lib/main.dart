@@ -10,19 +10,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var _questionIndex = 0;
+  var _questions = [
+    "What's is your favourite color?",
+    "What's is your favourite animal?"
+  ];
 
-    var _questionIndex = 0;
-    var _questions = [
-      "What's is your favourite color?",
-      "What's is your favourite animal?"
-    ];
-
-    void _showAnswer() {
-      setState(() {
+  void _showAnswer() {
+    setState(() {
       _questionIndex = _questionIndex + 1;
-      });
-      print('questionIndex: '+_questionIndex.toString());
-    }
+    });
+    print('questionIndex: ' + _questionIndex.toString());
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
